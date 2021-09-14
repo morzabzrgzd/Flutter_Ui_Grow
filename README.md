@@ -6,9 +6,8 @@ https://freebiesui.com/figma-freebies/figma-ui-kits/grow-login-screen-ui/
 Link  youtube for tutorial this code:
 https://www.youtube.com/watch?v=THvkqyY_C_w&t=108s
 
+![maxresdefault (1)](https://user-images.githubusercontent.com/87581799/133272391-a7f35cf3-d69c-40e9-95e1-81b6b50d5e1d.jpg)
 
-![2](https://user-images.githubusercontent.com/87581799/132354048-45bbea4e-4d40-44ad-ac57-c3db37537c26.png)
-![01](https://user-images.githubusercontent.com/87581799/132354062-fed77bc2-e05e-4520-9871-416d016a6baa.png)
 
 
 A new Flutter project.
