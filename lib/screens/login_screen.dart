@@ -1,3 +1,4 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_ui/constant.dart';
@@ -15,7 +16,10 @@ class LoginScreen extends StatelessWidget {
           centerTitle: true,
           elevation: 0,
           automaticallyImplyLeading: false,
-          title: Text('Join Grow'),
+          title: DelayedDisplay(
+            slidingBeginOffset: Offset(0, -1),
+            child: Text('Join Grow'),
+          ),
         ),
         body: Container(
           width: double.infinity,
@@ -27,63 +31,85 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: size.height * 0.04),
-                BuldTextField(
-                  size: size,
-                  hintText: 'Email',
+                DelayedDisplay(
+                  slidingBeginOffset: Offset(0, -4),
+                  child: BuldTextField(
+                    size: size,
+                    hintText: 'Email',
+                  ),
                 ),
                 SizedBox(height: size.height * 0.02),
-                BuldTextField(
-                  size: size,
-                  hintText: 'Password',
-                  suffixIcon: Icon(
-                    Icons.visibility,
-                    color: Colors.grey,
+                DelayedDisplay(
+                  slidingBeginOffset: Offset(0, -3),
+                  child: BuldTextField(
+                    size: size,
+                    hintText: 'Password',
+                    suffixIcon: Icon(
+                      Icons.visibility,
+                      color: Colors.grey,
+                    ),
                   ),
                 ),
                 SizedBox(height: size.height * 0.03),
-                ButtonApp(
-                  iconImage: Text(''),
-                  size: size,
-                  borderColor: kbuttonLoginColor,
-                  color: kbuttonLoginColor,
-                  title: 'Login',
-                  titleColor: kTextWhiteColor,
+                DelayedDisplay(
+                  slidingBeginOffset: Offset(0, -2),
+                  child: ButtonApp(
+                    iconImage: Text(''),
+                    size: size,
+                    borderColor: kbuttonLoginColor,
+                    color: kbuttonLoginColor,
+                    title: 'Login',
+                    titleColor: kTextWhiteColor,
+                  ),
                 ),
                 SizedBox(height: size.height * 0.025),
-                Text(
-                  'By continuing, you agree to Grow’s Terms of\nService and Privacy Policy',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                      color: kTextWhiteColor, fontWeight: FontWeight.w300),
+                DelayedDisplay(
+                  slidingBeginOffset: Offset(0, -1),
+                  child: Text(
+                    'By continuing, you agree to Grow’s Terms of\nService and Privacy Policy',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                        color: kTextWhiteColor, fontWeight: FontWeight.w300),
+                  ),
                 ),
                 SizedBox(height: size.height * 0.06),
                 OrWidgets(size: size),
                 SizedBox(height: size.height * 0.06),
-                ButtonApp(
-                  size: size,
-                  title: 'Sign in with Email',
-                  color: Colors.transparent,
-                  borderColor: Colors.white,
-                  titleColor: kTextWhiteColor,
-                  iconImage: SvgPicture.asset('assets/icons/iconMail.svg'),
+                DelayedDisplay(
+                  
+                  slidingBeginOffset: Offset(0, 1),
+                  child: ButtonApp(
+                    size: size,
+                    title: 'Sign in with Email',
+                    color: Colors.transparent,
+                    borderColor: Colors.white,
+                    titleColor: kTextWhiteColor,
+                    iconImage: SvgPicture.asset('assets/icons/iconMail.svg'),
+                  ),
                 ),
                 SizedBox(height: size.height * 0.025),
-                ButtonApp(
-                  size: size,
-                  title: 'Sign in with Apple',
-                  color: kbuttonSignAppleColor,
-                  borderColor: kbuttonSignAppleColor,
-                  titleColor: kTextBlackColor,
-                  iconImage: SvgPicture.asset('assets/icons/iconApple.svg'),
+                DelayedDisplay(
+                  slidingBeginOffset: Offset(0, 2),
+                  child: ButtonApp(
+                    size: size,
+                    title: 'Sign in with Apple',
+                    color: kbuttonSignAppleColor,
+                    borderColor: kbuttonSignAppleColor,
+                    titleColor: kTextBlackColor,
+                    iconImage: SvgPicture.asset('assets/icons/iconApple.svg'),
+                  ),
                 ),
                 SizedBox(height: size.height * 0.025),
-                ButtonApp(
-                  size: size,
-                  title: 'Sign in with Google',
-                  color: kbuttonSignGoogleColor,
-                  borderColor: kbuttonSignGoogleColor,
-                  titleColor: kTextWhiteColor,
-                  iconImage: SvgPicture.asset('assets/icons/iconGoogle.svg'),
+                DelayedDisplay(
+                  slidingBeginOffset: Offset(0, 3),
+                  child: ButtonApp(
+                    size: size,
+                    title: 'Sign in with Google',
+                    color: kbuttonSignGoogleColor,
+                    borderColor: kbuttonSignGoogleColor,
+                    titleColor: kTextWhiteColor,
+                    iconImage: SvgPicture.asset('assets/icons/iconGoogle.svg'),
+                  ),
                 ),
               ],
             ),
@@ -204,8 +230,10 @@ class BuldTextField extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextField(
+        
         decoration: InputDecoration(
             hintText: hintText,
+            
             border: InputBorder.none,
             hintStyle: GoogleFonts.poppins(color: Colors.grey),
             suffixIcon: suffixIcon,
